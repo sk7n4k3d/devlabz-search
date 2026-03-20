@@ -1,0 +1,14 @@
+services:
+  devlabz-search:
+    build: .
+    container_name: devlabz-search
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - SEARXNG_URL=http://10.8.0.101:5456
+      - RERANKER_URL=http://10.8.0.101:8401
+      - CRAWL4AI_URL=http://10.8.0.101:11235
+      - LLM_URL=http://10.8.0.2:8080
+      - LLM_MODEL=Qwen3.5-122B-A10B
+      - WHISPER_URL=http://10.8.0.101:8300
+      - KOKORO_URL=http://10.8.0.101:8880
