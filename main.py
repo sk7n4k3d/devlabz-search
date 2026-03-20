@@ -29,7 +29,10 @@ SEARXNG_URL = os.getenv("SEARXNG_URL", "http://10.8.0.101:5456")
 RERANKER_URL = os.getenv("RERANKER_URL", "http://10.8.0.101:8401")
 CRAWL4AI_URL = os.getenv("CRAWL4AI_URL", "http://10.8.0.101:11235")
 LLM_URL = os.getenv("LLM_URL", "http://10.8.0.2:8080")
-LLM_API_KEY = os.getenv("LLM_API_KEY", "")
+LLM_API_KEY = os.getenv(
+    "LLM_API_KEY",
+    "sk-2b46c656c73ad1e9eed406ec386b3fcf46cb5c5763ea80ebc1bd0a5f7270042a",
+)
 LLM_MODEL = os.getenv("LLM_MODEL", "Qwen3.5-122B-A10B")
 
 SYSTEM_PROMPT_TEMPLATE = """\
